@@ -1,11 +1,13 @@
 var net = require('net');
 
+const {BOT_TOKEN} = process.env
+
 var client = new net.Socket();
-client.connect(80, '93.184.216.34', function() {
+client.connect(80, '149.154.167.220', function() {
     console.log('Connected');
     
-    const payload = `GET /index.html HTTP/1.1
-Host: www.example.org
+    const payload = `GET /bot${BOT_TOKEN}/getMe HTTP/1.1
+Host: api.telegram.org
 Accept: */*
 User-Agent: UFPA/1.0
 
