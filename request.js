@@ -1,9 +1,8 @@
+require('dotenv').config();
+const env = process.env
 const tls = require('tls');
 const queryString = require('querystring');
-
-const PORT = 443; // https
-const HOST = '149.154.167.220' // telegram
-const { BOT_TOKEN } = process.env
+const { BOT_TOKEN,HOST,PORT } = process.env
 
 function request (method, data = undefined) {
     return new Promise((resolve, reject) => {
