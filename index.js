@@ -1,4 +1,5 @@
 const request = require('./request')
+const behaviour = require('./botBehaviour')
 
 const timeout = time => new Promise(resolve => setTimeout(resolve, time))
 
@@ -15,12 +16,13 @@ async function main() {
       const { message } = update
 
       if (message && !message.from.is_bot) {
-        await request('sendMessage', {
-          chat_id: update.message.chat.id,
-          text: `Did you just say '${message.text}'?`
-        })
-          .then(console.log)
-          .catch(console.error)
+        behaviour.behave(message)
+        //await request('sendMessage', {
+        //  chat_id: update.message.chat.id,
+        //  text: `Did you just say '${message.text}'?`
+        //})
+        //  .then(console.log)
+        //  .catch(console.error)
       }
 
       // Update offset
