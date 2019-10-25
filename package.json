@@ -15,6 +15,12 @@
     "nodemon": "^1.19.3"
   },
   "dependencies": {
-    "pm2": "^4.1.2"
+    "pm2": "^4.1.2",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2",
+    "dotenv": "^8.2.0"
   }
 }
